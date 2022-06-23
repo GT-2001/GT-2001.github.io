@@ -33,14 +33,9 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
+    <title>MySQL学习笔记</title>
     <url>/2022/06/23/14/30/49/</url>
-    <content><![CDATA[<p>title: MySQL学习笔记<br>tags:</p>
-<ul>
-<li>MySQL<br>categories:</li>
-<li>笔记</li>
-</ul>
-<h1 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h1><h6 id="数据库的好处："><a href="#数据库的好处：" class="headerlink" title="数据库的好处："></a>数据库的好处：</h6><ul>
+    <content><![CDATA[<h1 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h1><h6 id="数据库的好处："><a href="#数据库的好处：" class="headerlink" title="数据库的好处："></a>数据库的好处：</h6><ul>
 <li><p>实现数据持久化</p>
 </li>
 <li><p>使用完整的管理系统统一管理，易于查询</p>
@@ -53,7 +48,7 @@
 <p><em>常见的数据库管理系统：MySQL、Oracle、DB2、SqlServer等</em></p>
 </li>
 <li><p><strong>SQL</strong>：结构化查询语句（Structure Query Language）；专门用来与数据库通信的语言。</p>
-</li>
+<span id="more"></span></li>
 </ul>
 <h6 id="SQL的优点："><a href="#SQL的优点：" class="headerlink" title="SQL的优点："></a>SQL的优点：</h6><ol>
 <li>不是某个特定数据库供应商专有语言，几乎所有DBMS都支持SQL。</li>
@@ -132,5 +127,11 @@
 </li>
 </ol>
 ]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
   </entry>
 </search>

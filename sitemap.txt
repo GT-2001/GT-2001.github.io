@@ -6,4 +6,5 @@ http://www.imxtz.top/categories/index.html
 http://www.imxtz.top/tags/index.html
 http://www.imxtz.top/
 http://www.imxtz.top/tags/Markdown/
+http://www.imxtz.top/tags/MySQL/
 http://www.imxtz.top/categories/%E7%AC%94%E8%AE%B0/

@@ -167,7 +167,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -229,7 +229,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/06/23/14/30/49/" class="post-title-link" itemprop="url">未命名</a>
+          <a href="/2022/06/23/14/30/49/" class="post-title-link" itemprop="url">MySQL学习笔记</a>
         </h2>
 
         <div class="post-meta-container">
@@ -241,7 +241,16 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-06-23 14:30:49 / 修改时间：14:34:02" itemprop="dateCreated datePublished" datetime="2022-06-23T14:30:49+08:00">2022-06-23</time>
+      <time title="创建时间：2022-06-23 14:30:49 / 修改时间：14:40:58" itemprop="dateCreated datePublished" datetime="2022-06-23T14:30:49+08:00">2022-06-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+        </span>
     </span>
 
   
@@ -269,12 +278,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>title: MySQL学习笔记<br>tags:</p>
-<ul>
-<li>MySQL<br>categories:</li>
-<li>笔记</li>
-</ul>
-<h1 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h1><h6 id="数据库的好处："><a href="#数据库的好处：" class="headerlink" title="数据库的好处："></a>数据库的好处：</h6><ul>
+          <h1 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h1><h6 id="数据库的好处："><a href="#数据库的好处：" class="headerlink" title="数据库的好处："></a>数据库的好处：</h6><ul>
 <li><p>实现数据持久化</p>
 </li>
 <li><p>使用完整的管理系统统一管理，易于查询</p>
@@ -287,85 +291,14 @@
 <p><em>常见的数据库管理系统：MySQL、Oracle、DB2、SqlServer等</em></p>
 </li>
 <li><p><strong>SQL</strong>：结构化查询语句（Structure Query Language）；专门用来与数据库通信的语言。</p>
-</li>
-</ul>
-<h6 id="SQL的优点："><a href="#SQL的优点：" class="headerlink" title="SQL的优点："></a>SQL的优点：</h6><ol>
-<li>不是某个特定数据库供应商专有语言，几乎所有DBMS都支持SQL。</li>
-<li>简单易学</li>
-<li>虽然简单，但实际上是一种强有力的语言，灵活使用其语言元素，可以进行非常复杂和高级的数据库的操作。</li>
-</ol>
-<h6 id="数据库的特点："><a href="#数据库的特点：" class="headerlink" title="数据库的特点："></a>数据库的特点：</h6><ol>
-<li>将数据放到表中，表在放到库中。</li>
-<li>一个数据库中可以有多个表，每个表都有一个名字，用来标识自己。表名具有唯一性。</li>
-<li>表具有一些特性，这些特性定义了数据在表中如何存储，类似Java中“类”的设计。</li>
-<li>表由列组成，他们也称为字段。所有表都是由一个或多个列组成的，每一列类似Java中的“属性”。</li>
-<li><code>表中的数据是按行存储的</code>，每一行类似Java中的“对象”。</li>
-</ol>
-<h6 id="MySQL产品的特点："><a href="#MySQL产品的特点：" class="headerlink" title="MySQL产品的特点："></a>MySQL产品的特点：</h6><ul>
-<li>成本低：开放源代码</li>
-<li>性能高：执行很快</li>
-<li>简单：很容易安装和使用</li>
-</ul>
-<h6 id="MySQL的下载："><a href="#MySQL的下载：" class="headerlink" title="MySQL的下载："></a>MySQL的下载：</h6><p><a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/mysql/5.5.html#downloads">https://dev.mysql.com/downloads/mysql/5.5.html#downloads</a></p>
-<h6 id="MySQL服务的启动和停止："><a href="#MySQL服务的启动和停止：" class="headerlink" title="MySQL服务的启动和停止："></a>MySQL服务的启动和停止：</h6><ol>
-<li>右击开始→计算机管理→服务和应用程序→服务</li>
-<li>以管理员身份运行<strong>命令提示符</strong><ul>
-<li>停止：<code>net stop mysql</code></li>
-<li>启动：<code>net start mysql</code></li>
-</ul>
-</li>
-</ol>
-<h6 id="MySQL服务端的登陆和退出："><a href="#MySQL服务端的登陆和退出：" class="headerlink" title="MySQL服务端的登陆和退出："></a>MySQL服务端的登陆和退出：</h6><p><em>登陆之前确保服务是启动的！</em></p>
-<ol>
-<li><p>登陆：</p>
-<ul>
-<li><p>命令提示符 -h主机名 -P端口号 -u用户名 -p密码   <strong>(p和密码之间不能有空格)</strong></p>
-<p>​                    <code>mysql -h localhost -P 3306 -u root -p</code></p>
-<p>​                    <code>mysql -hlocalhost -P3306 -uroot -p</code>    </p>
-</li>
-<li><p>开始菜单→MySQL客户端（只限于root用户）</p>
-</li>
-</ul>
-</li>
-<li><p>退出：exit 或 Ctrl+C</p>
-</li>
-</ol>
-<h4 id="MySQL的常见命令"><a href="#MySQL的常见命令" class="headerlink" title="MySQL的常见命令"></a>MySQL的常见命令</h4><ol>
-<li><p>查看当前所有的数据库        <code>show databases;</code></p>
-</li>
-<li><p>打开指定的库                       <code>use 库名；</code></p>
-</li>
-<li><p>查看当前库的所有表            <code>show tables;</code>    </p>
-</li>
-<li><p>查看其它库的所有表            <code>show tables from 库名；</code></p>
-<p>例：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">use test;</span><br><span class="line"><span class="keyword">show</span> tables;</span><br><span class="line"><span class="keyword">show</span> tables <span class="keyword">from</span> mysql;</span><br><span class="line"></span><br><span class="line">#此时依然在test库里，仅仅是查看了mysql里的表，而没有出去</span><br></pre></td></tr></table></figure></li>
-<li><p>查看当前所在库                   <code>show  database();</code></p>
-</li>
-<li><p>创建表                              </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> 表名（</span><br><span class="line">列名	列类型，</span><br><span class="line">列名	列类型，</span><br><span class="line">...</span><br><span class="line">);</span><br></pre></td></tr></table></figure></li>
-<li><p>查看表结构                            <code>desc 表名；</code></p>
-</li>
-<li><p>查看表中数据                        <code>select * from 表名；</code></p>
-</li>
-<li><p>查看当前数据库的版本</p>
-<p>方式一：登录到MySQL服务端</p>
-<p>​               <code>select version()</code></p>
-<p>方式二：没有登录到MySQL服务端</p>
-<p>​                <code>mysql --version</code>    或者    <code>mysql -V</code></p>
-</li>
-</ol>
-<h5 id="MySQL语法规范"><a href="#MySQL语法规范" class="headerlink" title="MySQL语法规范"></a>MySQL语法规范</h5><ol>
-<li>不区分大小写，但建议关键字大写，表名、列名小写</li>
-<li>每行命令最好用分号结尾</li>
-<li>每条命令根据需要，可以进行缩进或换行</li>
-<li>注释<ol>
-<li>单行注释：#注释文字    或者–  注释文字<strong>（–后面必须加空格）</strong></li>
-<li>多行注释：<code>/*注释文字*/</code></li>
-</ol>
-</li>
-</ol>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/06/23/14/30/49/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
