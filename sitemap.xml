@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.imxtz.top/2022/06/23/14/30/49/</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.imxtz.top/2022/04/19/18/21/50/</loc>
     
     <lastmod>2022-04-22</lastmod>
@@ -49,7 +58,7 @@
 
   <url>
     <loc>http://www.imxtz.top/</loc>
-    <lastmod>2022-04-22</lastmod>
+    <lastmod>2022-06-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -57,7 +66,7 @@
   
   <url>
     <loc>http://www.imxtz.top/tags/Markdown/</loc>
-    <lastmod>2022-04-22</lastmod>
+    <lastmod>2022-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -66,7 +75,7 @@
   
   <url>
     <loc>http://www.imxtz.top/categories/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-04-22</lastmod>
+    <lastmod>2022-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
