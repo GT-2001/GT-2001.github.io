@@ -34,52 +34,51 @@
   </entry>
   <entry>
     <title>MySQL学习笔记</title>
-    <url>/2022/06/23/14/30/49/</url>
-    <content><![CDATA[<h1 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h1><h6 id="数据库的好处："><a href="#数据库的好处：" class="headerlink" title="数据库的好处："></a>数据库的好处：</h6><ul>
+    <url>/2022/06/24/16/17/01/</url>
+    <content><![CDATA[<h1 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h1><h2 id="认识数据库"><a href="#认识数据库" class="headerlink" title="认识数据库"></a>认识数据库</h2><h3 id="数据库的入门"><a href="#数据库的入门" class="headerlink" title="数据库的入门"></a>数据库的入门</h3><h4 id="数据库的好处："><a href="#数据库的好处：" class="headerlink" title="数据库的好处："></a>数据库的好处：</h4><ul>
 <li><p>实现数据持久化</p>
 </li>
 <li><p>使用完整的管理系统统一管理，易于查询</p>
-</li>
+<span id="more"></span></li>
 </ul>
-<h6 id="数据库的概念："><a href="#数据库的概念：" class="headerlink" title="数据库的概念："></a>数据库的概念：</h6><ul>
+<h4 id="数据库的概念："><a href="#数据库的概念：" class="headerlink" title="数据库的概念："></a>数据库的概念：</h4><ul>
 <li><p><strong>DB</strong>：数据库（database）;存储数据的“仓库，它保存了一系列有组织的数据。</p>
 </li>
 <li><p><strong>DBMS</strong>：数据库管理系统（Database Management System）;数据库是通过DBMS创建和操作的容器。</p>
 <p><em>常见的数据库管理系统：MySQL、Oracle、DB2、SqlServer等</em></p>
 </li>
 <li><p><strong>SQL</strong>：结构化查询语句（Structure Query Language）；专门用来与数据库通信的语言。</p>
-<span id="more"></span></li>
+</li>
 </ul>
-<h6 id="SQL的优点："><a href="#SQL的优点：" class="headerlink" title="SQL的优点："></a>SQL的优点：</h6><ol>
+<h4 id="SQL的优点："><a href="#SQL的优点：" class="headerlink" title="SQL的优点："></a>SQL的优点：</h4><ol>
 <li>不是某个特定数据库供应商专有语言，几乎所有DBMS都支持SQL。</li>
 <li>简单易学</li>
 <li>虽然简单，但实际上是一种强有力的语言，灵活使用其语言元素，可以进行非常复杂和高级的数据库的操作。</li>
 </ol>
-<h6 id="数据库的特点："><a href="#数据库的特点：" class="headerlink" title="数据库的特点："></a>数据库的特点：</h6><ol>
+<h4 id="数据库的特点："><a href="#数据库的特点：" class="headerlink" title="数据库的特点："></a>数据库的特点：</h4><ol>
 <li>将数据放到表中，表在放到库中。</li>
 <li>一个数据库中可以有多个表，每个表都有一个名字，用来标识自己。表名具有唯一性。</li>
 <li>表具有一些特性，这些特性定义了数据在表中如何存储，类似Java中“类”的设计。</li>
 <li>表由列组成，他们也称为字段。所有表都是由一个或多个列组成的，每一列类似Java中的“属性”。</li>
-<li><code>表中的数据是按行存储的</code>，每一行类似Java中的“对象”。</li>
+<li>表中的数据是按行存储的，每一行类似Java中的“对象”。</li>
 </ol>
-<h6 id="MySQL产品的特点："><a href="#MySQL产品的特点：" class="headerlink" title="MySQL产品的特点："></a>MySQL产品的特点：</h6><ul>
+<h4 id="MySQL产品的特点："><a href="#MySQL产品的特点：" class="headerlink" title="MySQL产品的特点："></a>MySQL产品的特点：</h4><ul>
 <li>成本低：开放源代码</li>
 <li>性能高：执行很快</li>
 <li>简单：很容易安装和使用</li>
 </ul>
-<h6 id="MySQL的下载："><a href="#MySQL的下载：" class="headerlink" title="MySQL的下载："></a>MySQL的下载：</h6><p><a href="https://dev.mysql.com/downloads/mysql/5.5.html#downloads">https://dev.mysql.com/downloads/mysql/5.5.html#downloads</a></p>
-<h6 id="MySQL服务的启动和停止："><a href="#MySQL服务的启动和停止：" class="headerlink" title="MySQL服务的启动和停止："></a>MySQL服务的启动和停止：</h6><ol>
-<li>右击开始→计算机管理→服务和应用程序→服务</li>
-<li>以管理员身份运行<strong>命令提示符</strong><ul>
+<h3 id="数据库的下载安装、配置与使用"><a href="#数据库的下载安装、配置与使用" class="headerlink" title="数据库的下载安装、配置与使用"></a>数据库的下载安装、配置与使用</h3><h4 id="MySQL的下载："><a href="#MySQL的下载：" class="headerlink" title="MySQL的下载："></a>MySQL的下载：</h4><p><a href="https://dev.mysql.com/downloads/mysql/5.5.html#downloads">https://dev.mysql.com/downloads/mysql/5.5.html#downloads</a></p>
+<h4 id="MySQL服务的启动和停止："><a href="#MySQL服务的启动和停止：" class="headerlink" title="MySQL服务的启动和停止："></a>MySQL服务的启动和停止：</h4><ol>
+<li><h5 id="右击开始→计算机管理→服务和应用程序→服务"><a href="#右击开始→计算机管理→服务和应用程序→服务" class="headerlink" title="右击开始→计算机管理→服务和应用程序→服务"></a>右击开始→计算机管理→服务和应用程序→服务</h5></li>
+<li><h5 id="以管理员身份运行命令提示符"><a href="#以管理员身份运行命令提示符" class="headerlink" title="以管理员身份运行命令提示符"></a>以管理员身份运行<strong>命令提示符</strong></h5><ul>
 <li>停止：<code>net stop mysql</code></li>
 <li>启动：<code>net start mysql</code></li>
 </ul>
 </li>
 </ol>
-<h6 id="MySQL服务端的登陆和退出："><a href="#MySQL服务端的登陆和退出：" class="headerlink" title="MySQL服务端的登陆和退出："></a>MySQL服务端的登陆和退出：</h6><p><em>登陆之前确保服务是启动的！</em></p>
+<h4 id="MySQL服务端的登陆和退出："><a href="#MySQL服务端的登陆和退出：" class="headerlink" title="MySQL服务端的登陆和退出："></a>MySQL服务端的登陆和退出：</h4><p><em>登陆之前确保服务是启动的！</em></p>
 <ol>
-<li><p>登陆：</p>
-<ul>
+<li><h5 id="登陆："><a href="#登陆：" class="headerlink" title="登陆："></a>登陆：</h5><ul>
 <li><p>命令提示符 -h主机名 -P端口号 -u用户名 -p密码   <strong>(p和密码之间不能有空格)</strong></p>
 <p>​                    <code>mysql -h localhost -P 3306 -u root -p</code></p>
 <p>​                    <code>mysql -hlocalhost -P3306 -uroot -p</code>    </p>
@@ -88,10 +87,9 @@
 </li>
 </ul>
 </li>
-<li><p>退出：exit 或 Ctrl+C</p>
-</li>
+<li><h5 id="退出：exit-或-Ctrl-C"><a href="#退出：exit-或-Ctrl-C" class="headerlink" title="退出：exit 或 Ctrl+C"></a>退出：exit 或 Ctrl+C</h5></li>
 </ol>
-<h4 id="MySQL的常见命令"><a href="#MySQL的常见命令" class="headerlink" title="MySQL的常见命令"></a>MySQL的常见命令</h4><ol>
+<h3 id="MySQL的常见命令"><a href="#MySQL的常见命令" class="headerlink" title="MySQL的常见命令"></a>MySQL的常见命令</h3><ol>
 <li><p>查看当前所有的数据库        <code>show databases;</code></p>
 </li>
 <li><p>打开指定的库                       <code>use 库名；</code></p>
@@ -116,7 +114,7 @@
 <p>​                <code>mysql --version</code>    或者    <code>mysql -V</code></p>
 </li>
 </ol>
-<h5 id="MySQL语法规范"><a href="#MySQL语法规范" class="headerlink" title="MySQL语法规范"></a>MySQL语法规范</h5><ol>
+<h3 id="MySQL语法规范"><a href="#MySQL语法规范" class="headerlink" title="MySQL语法规范"></a>MySQL语法规范</h3><ol>
 <li>不区分大小写，但建议关键字大写，表名、列名小写</li>
 <li>每行命令最好用分号结尾</li>
 <li>每条命令根据需要，可以进行缩进或换行</li>
@@ -126,7 +124,70 @@
 </ol>
 </li>
 </ol>
-]]></content>
+<h2 id="DQL语言的学习"><a href="#DQL语言的学习" class="headerlink" title="DQL语言的学习"></a>DQL语言的学习</h2><h3 id="基础查询"><a href="#基础查询" class="headerlink" title="基础查询"></a>基础查询</h3><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ol>
+<li>查询列表可以是：表中的字段、常量值、表达式、函数</li>
+<li>查询的结果是一个虚拟的表格</li>
+</ol>
+<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><p>​    select    查询列表    from    表名；</p>
+<p>​    查询前先打开数据库        <code>use myemployees;</code></p>
+<ol>
+<li><p>查询表中的单个字段    <code>select last_name from employees;</code></p>
+</li>
+<li><p>查询表中多个字段        <code>select last_name,salary,email,from employees;</code></p>
+</li>
+<li><p>查询表中的所有字段    <code>select * from employees;</code></p>
+</li>
+<li><p>查询常量值                   <code>select 100;</code>      <code>select &#39;john&#39;;</code></p>
+</li>
+<li><p>查询表达式                   <code>select 100*98;</code>    </p>
+</li>
+<li><p>查询函数                       <code>select verson();</code></p>
+</li>
+<li><p>为字段起别名</p>
+<ul>
+<li>好处：1、便于理解</li>
+</ul>
+<p>​                    2、如果要查询的字段有重名的情况，使用别名可以区分开来</p>
+<ul>
+<li><p>方式一：使用as</p>
+<p><code>select last_name as 姓，first_name as 名 from employees;</code></p>
+</li>
+<li><p>方式二：使用空格</p>
+<p><code>select last_name 姓,first_name 名 from employees;</code></p>
+</li>
+<li><p>案例：查询salary,显示结果为 out put</p>
+<ul>
+<li><p><code>select salary as &#39;out put&#39; from employees; </code></p>
+<p><em>当别名中有空格、#等特殊符号时，用引号括起来</em></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>去重</p>
+<p> 查询员工表中涉及到的所有的部门编号                         </p>
+<p> <code>select distinct department_id from employees;</code></p>
+</li>
+<li><p>+的作用</p>
+<ul>
+<li>mysql中+只有一个功能：运算符</li>
+</ul>
+<ol>
+<li>两个操作数都为数值型，则做加法运算    <code>select 100+90;</code></li>
+<li>其中一方为字符型，试图将字符型数值转换成数值型<ul>
+<li>如果转换成功，则继续做加法运算    <code>select &#39;123&#39;+90;</code></li>
+<li>如果转换失败，则将字符型数值转换成0    <code>select &#39;john&#39;+90;</code></li>
+</ul>
+</li>
+<li>只要其中一方为null,则结果肯定为null</li>
+</ol>
+<ul>
+<li><p>案例：查询员工名和姓连接成一个字段，并显示为 姓名</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">		concat(last_name,first_name) <span class="keyword">as</span> 姓名</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">		employees</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h3><h3 id="排序查询"><a href="#排序查询" class="headerlink" title="排序查询"></a>排序查询</h3><h3 id="常见函数"><a href="#常见函数" class="headerlink" title="常见函数"></a>常见函数</h3><h3 id="分组函数"><a href="#分组函数" class="headerlink" title="分组函数"></a>分组函数</h3><h3 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h3><h3 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h3><h3 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h3><h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><h3 id="union联合查询"><a href="#union联合查询" class="headerlink" title="union联合查询"></a>union联合查询</h3><h2 id="DML语言的学习"><a href="#DML语言的学习" class="headerlink" title="DML语言的学习"></a>DML语言的学习</h2><h3 id="插入语句"><a href="#插入语句" class="headerlink" title="插入语句"></a>插入语句</h3><h3 id="修改语句"><a href="#修改语句" class="headerlink" title="修改语句"></a>修改语句</h3><h3 id="删除语句"><a href="#删除语句" class="headerlink" title="删除语句"></a>删除语句</h3><h2 id="DDL语言的学习"><a href="#DDL语言的学习" class="headerlink" title="DDL语言的学习"></a>DDL语言的学习</h2><h3 id="库和表的管理"><a href="#库和表的管理" class="headerlink" title="库和表的管理"></a>库和表的管理</h3><h3 id="常见数据类型介绍"><a href="#常见数据类型介绍" class="headerlink" title="常见数据类型介绍"></a>常见数据类型介绍</h3><h3 id="常见约束"><a href="#常见约束" class="headerlink" title="常见约束"></a>常见约束</h3><h2 id="TCL语言的学习"><a href="#TCL语言的学习" class="headerlink" title="TCL语言的学习"></a>TCL语言的学习</h2><h3 id="事务和事务处理"><a href="#事务和事务处理" class="headerlink" title="事务和事务处理"></a>事务和事务处理</h3><h2 id="视图的讲解"><a href="#视图的讲解" class="headerlink" title="视图的讲解"></a>视图的讲解</h2><h2 id="存储过程和函数"><a href="#存储过程和函数" class="headerlink" title="存储过程和函数"></a>存储过程和函数</h2><h2 id="流程控制结构"><a href="#流程控制结构" class="headerlink" title="流程控制结构"></a>流程控制结构</h2>]]></content>
       <categories>
         <category>笔记</category>
       </categories>

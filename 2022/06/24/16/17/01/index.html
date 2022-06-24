@@ -22,25 +22,25 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.imxtz.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="MySQL基础数据库的好处： 实现数据持久化  使用完整的管理系统统一管理，易于查询   数据库的概念： DB：数据库（database）;存储数据的“仓库，它保存了一系列有组织的数据。  DBMS：数据库管理系统（Database Management System）;数据库是通过DBMS创建和操作的容器。 常见的数据库管理系统：MySQL、Oracle、DB2、SqlServer等  SQL：">
+    <meta name="description" content="MySQL基础认识数据库数据库的入门数据库的好处： 实现数据持久化  使用完整的管理系统统一管理，易于查询">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL学习笔记">
-<meta property="og:url" content="http://www.imxtz.top/2022/06/23/14/30/49/index.html">
+<meta property="og:url" content="http://www.imxtz.top/2022/06/24/16/17/01/index.html">
 <meta property="og:site_name" content="熊涛子の个人博客">
-<meta property="og:description" content="MySQL基础数据库的好处： 实现数据持久化  使用完整的管理系统统一管理，易于查询   数据库的概念： DB：数据库（database）;存储数据的“仓库，它保存了一系列有组织的数据。  DBMS：数据库管理系统（Database Management System）;数据库是通过DBMS创建和操作的容器。 常见的数据库管理系统：MySQL、Oracle、DB2、SqlServer等  SQL：">
+<meta property="og:description" content="MySQL基础认识数据库数据库的入门数据库的好处： 实现数据持久化  使用完整的管理系统统一管理，易于查询">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-06-23T06:30:49.115Z">
-<meta property="article:modified_time" content="2022-06-23T06:40:58.207Z">
+<meta property="article:published_time" content="2022-06-24T08:17:01.845Z">
+<meta property="article:modified_time" content="2022-06-24T08:18:10.727Z">
 <meta property="article:author" content="熊涛子">
 <meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://www.imxtz.top/2022/06/23/14/30/49/">
+<link rel="canonical" href="http://www.imxtz.top/2022/06/24/16/17/01/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.imxtz.top/2022/06/23/14/30/49/","path":"2022/06/23/14/30/49/","title":"MySQL学习笔记"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.imxtz.top/2022/06/24/16/17/01/","path":"2022/06/24/16/17/01/","title":"MySQL学习笔记"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>MySQL学习笔记 | 熊涛子の个人博客</title>
@@ -147,7 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">MySQL基础</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%A5%BD%E5%A4%84%EF%BC%9A"><span class="nav-number">1.0.0.0.0.1.</span> <span class="nav-text">数据库的好处：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%9A"><span class="nav-number">1.0.0.0.0.2.</span> <span class="nav-text">数据库的概念：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#SQL%E7%9A%84%E4%BC%98%E7%82%B9%EF%BC%9A"><span class="nav-number">1.0.0.0.0.3.</span> <span class="nav-text">SQL的优点：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%9A"><span class="nav-number">1.0.0.0.0.4.</span> <span class="nav-text">数据库的特点：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#MySQL%E4%BA%A7%E5%93%81%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%9A"><span class="nav-number">1.0.0.0.0.5.</span> <span class="nav-text">MySQL产品的特点：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#MySQL%E7%9A%84%E4%B8%8B%E8%BD%BD%EF%BC%9A"><span class="nav-number">1.0.0.0.0.6.</span> <span class="nav-text">MySQL的下载：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#MySQL%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%90%AF%E5%8A%A8%E5%92%8C%E5%81%9C%E6%AD%A2%EF%BC%9A"><span class="nav-number">1.0.0.0.0.7.</span> <span class="nav-text">MySQL服务的启动和停止：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#MySQL%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%99%BB%E9%99%86%E5%92%8C%E9%80%80%E5%87%BA%EF%BC%9A"><span class="nav-number">1.0.0.0.0.8.</span> <span class="nav-text">MySQL服务端的登陆和退出：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MySQL%E7%9A%84%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">MySQL的常见命令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#MySQL%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83"><span class="nav-number">1.0.0.1.1.</span> <span class="nav-text">MySQL语法规范</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">MySQL基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A4%E8%AF%86%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.1.</span> <span class="nav-text">认识数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%85%A5%E9%97%A8"><span class="nav-number">1.1.1.</span> <span class="nav-text">数据库的入门</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%A5%BD%E5%A4%84%EF%BC%9A"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">数据库的好处：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%9A"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">数据库的概念：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SQL%E7%9A%84%E4%BC%98%E7%82%B9%EF%BC%9A"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">SQL的优点：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%9A"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">数据库的特点：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MySQL%E4%BA%A7%E5%93%81%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%9A"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">MySQL产品的特点：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8"><span class="nav-number">1.1.2.</span> <span class="nav-text">数据库的下载安装、配置与使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#MySQL%E7%9A%84%E4%B8%8B%E8%BD%BD%EF%BC%9A"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">MySQL的下载：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MySQL%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%90%AF%E5%8A%A8%E5%92%8C%E5%81%9C%E6%AD%A2%EF%BC%9A"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">MySQL服务的启动和停止：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%B3%E5%87%BB%E5%BC%80%E5%A7%8B%E2%86%92%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AE%A1%E7%90%86%E2%86%92%E6%9C%8D%E5%8A%A1%E5%92%8C%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E2%86%92%E6%9C%8D%E5%8A%A1"><span class="nav-number">1.1.2.2.1.</span> <span class="nav-text">右击开始→计算机管理→服务和应用程序→服务</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%A5%E7%AE%A1%E7%90%86%E5%91%98%E8%BA%AB%E4%BB%BD%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6"><span class="nav-number">1.1.2.2.2.</span> <span class="nav-text">以管理员身份运行命令提示符</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MySQL%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%99%BB%E9%99%86%E5%92%8C%E9%80%80%E5%87%BA%EF%BC%9A"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">MySQL服务端的登陆和退出：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%99%BB%E9%99%86%EF%BC%9A"><span class="nav-number">1.1.2.3.1.</span> <span class="nav-text">登陆：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%80%80%E5%87%BA%EF%BC%9Aexit-%E6%88%96-Ctrl-C"><span class="nav-number">1.1.2.3.2.</span> <span class="nav-text">退出：exit 或 Ctrl+C</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL%E7%9A%84%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4"><span class="nav-number">1.1.3.</span> <span class="nav-text">MySQL的常见命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83"><span class="nav-number">1.1.4.</span> <span class="nav-text">MySQL语法规范</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DQL%E8%AF%AD%E8%A8%80%E7%9A%84%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.2.</span> <span class="nav-text">DQL语言的学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E6%9F%A5%E8%AF%A2"><span class="nav-number">1.2.1.</span> <span class="nav-text">基础查询</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">语法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2"><span class="nav-number">1.2.2.</span> <span class="nav-text">条件查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F%E6%9F%A5%E8%AF%A2"><span class="nav-number">1.2.3.</span> <span class="nav-text">排序查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.4.</span> <span class="nav-text">常见函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.5.</span> <span class="nav-text">分组函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2"><span class="nav-number">1.2.6.</span> <span class="nav-text">分组查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%9F%A5%E8%AF%A2"><span class="nav-number">1.2.7.</span> <span class="nav-text">连接查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="nav-number">1.2.8.</span> <span class="nav-text">子查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="nav-number">1.2.9.</span> <span class="nav-text">分页查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#union%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2"><span class="nav-number">1.2.10.</span> <span class="nav-text">union联合查询</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DML%E8%AF%AD%E8%A8%80%E7%9A%84%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.3.</span> <span class="nav-text">DML语言的学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.3.1.</span> <span class="nav-text">插入语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.3.2.</span> <span class="nav-text">修改语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.3.3.</span> <span class="nav-text">删除语句</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DDL%E8%AF%AD%E8%A8%80%E7%9A%84%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.4.</span> <span class="nav-text">DDL语言的学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%93%E5%92%8C%E8%A1%A8%E7%9A%84%E7%AE%A1%E7%90%86"><span class="nav-number">1.4.1.</span> <span class="nav-text">库和表的管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.4.2.</span> <span class="nav-text">常见数据类型介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%BA%A6%E6%9D%9F"><span class="nav-number">1.4.3.</span> <span class="nav-text">常见约束</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCL%E8%AF%AD%E8%A8%80%E7%9A%84%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.5.</span> <span class="nav-text">TCL语言的学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E5%8A%A1%E5%92%8C%E4%BA%8B%E5%8A%A1%E5%A4%84%E7%90%86"><span class="nav-number">1.5.1.</span> <span class="nav-text">事务和事务处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E5%9B%BE%E7%9A%84%E8%AE%B2%E8%A7%A3"><span class="nav-number">1.6.</span> <span class="nav-text">视图的讲解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E5%92%8C%E5%87%BD%E6%95%B0"><span class="nav-number">1.7.</span> <span class="nav-text">存储过程和函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84"><span class="nav-number">1.8.</span> <span class="nav-text">流程控制结构</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -218,7 +218,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.imxtz.top/2022/06/23/14/30/49/">
+    <link itemprop="mainEntityOfPage" href="http://www.imxtz.top/2022/06/24/16/17/01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://s1.ax1x.com/2022/04/20/Ly9Dc6.jpg#/images/avatar.gif">
@@ -248,7 +248,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-06-23 14:30:49 / 修改时间：14:40:58" itemprop="dateCreated datePublished" datetime="2022-06-23T14:30:49+08:00">2022-06-23</time>
+      <time title="创建时间：2022-06-24 16:17:01 / 修改时间：16:18:10" itemprop="dateCreated datePublished" datetime="2022-06-24T16:17:01+08:00">2022-06-24</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -274,14 +274,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
+      <span>2.3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -292,51 +292,50 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h1><h6 id="数据库的好处："><a href="#数据库的好处：" class="headerlink" title="数据库的好处："></a>数据库的好处：</h6><ul>
+        <h1 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h1><h2 id="认识数据库"><a href="#认识数据库" class="headerlink" title="认识数据库"></a>认识数据库</h2><h3 id="数据库的入门"><a href="#数据库的入门" class="headerlink" title="数据库的入门"></a>数据库的入门</h3><h4 id="数据库的好处："><a href="#数据库的好处：" class="headerlink" title="数据库的好处："></a>数据库的好处：</h4><ul>
 <li><p>实现数据持久化</p>
 </li>
 <li><p>使用完整的管理系统统一管理，易于查询</p>
-</li>
+<span id="more"></span></li>
 </ul>
-<h6 id="数据库的概念："><a href="#数据库的概念：" class="headerlink" title="数据库的概念："></a>数据库的概念：</h6><ul>
+<h4 id="数据库的概念："><a href="#数据库的概念：" class="headerlink" title="数据库的概念："></a>数据库的概念：</h4><ul>
 <li><p><strong>DB</strong>：数据库（database）;存储数据的“仓库，它保存了一系列有组织的数据。</p>
 </li>
 <li><p><strong>DBMS</strong>：数据库管理系统（Database Management System）;数据库是通过DBMS创建和操作的容器。</p>
 <p><em>常见的数据库管理系统：MySQL、Oracle、DB2、SqlServer等</em></p>
 </li>
 <li><p><strong>SQL</strong>：结构化查询语句（Structure Query Language）；专门用来与数据库通信的语言。</p>
-<span id="more"></span></li>
+</li>
 </ul>
-<h6 id="SQL的优点："><a href="#SQL的优点：" class="headerlink" title="SQL的优点："></a>SQL的优点：</h6><ol>
+<h4 id="SQL的优点："><a href="#SQL的优点：" class="headerlink" title="SQL的优点："></a>SQL的优点：</h4><ol>
 <li>不是某个特定数据库供应商专有语言，几乎所有DBMS都支持SQL。</li>
 <li>简单易学</li>
 <li>虽然简单，但实际上是一种强有力的语言，灵活使用其语言元素，可以进行非常复杂和高级的数据库的操作。</li>
 </ol>
-<h6 id="数据库的特点："><a href="#数据库的特点：" class="headerlink" title="数据库的特点："></a>数据库的特点：</h6><ol>
+<h4 id="数据库的特点："><a href="#数据库的特点：" class="headerlink" title="数据库的特点："></a>数据库的特点：</h4><ol>
 <li>将数据放到表中，表在放到库中。</li>
 <li>一个数据库中可以有多个表，每个表都有一个名字，用来标识自己。表名具有唯一性。</li>
 <li>表具有一些特性，这些特性定义了数据在表中如何存储，类似Java中“类”的设计。</li>
 <li>表由列组成，他们也称为字段。所有表都是由一个或多个列组成的，每一列类似Java中的“属性”。</li>
-<li><code>表中的数据是按行存储的</code>，每一行类似Java中的“对象”。</li>
+<li>表中的数据是按行存储的，每一行类似Java中的“对象”。</li>
 </ol>
-<h6 id="MySQL产品的特点："><a href="#MySQL产品的特点：" class="headerlink" title="MySQL产品的特点："></a>MySQL产品的特点：</h6><ul>
+<h4 id="MySQL产品的特点："><a href="#MySQL产品的特点：" class="headerlink" title="MySQL产品的特点："></a>MySQL产品的特点：</h4><ul>
 <li>成本低：开放源代码</li>
 <li>性能高：执行很快</li>
 <li>简单：很容易安装和使用</li>
 </ul>
-<h6 id="MySQL的下载："><a href="#MySQL的下载：" class="headerlink" title="MySQL的下载："></a>MySQL的下载：</h6><p><a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/mysql/5.5.html#downloads">https://dev.mysql.com/downloads/mysql/5.5.html#downloads</a></p>
-<h6 id="MySQL服务的启动和停止："><a href="#MySQL服务的启动和停止：" class="headerlink" title="MySQL服务的启动和停止："></a>MySQL服务的启动和停止：</h6><ol>
-<li>右击开始→计算机管理→服务和应用程序→服务</li>
-<li>以管理员身份运行<strong>命令提示符</strong><ul>
+<h3 id="数据库的下载安装、配置与使用"><a href="#数据库的下载安装、配置与使用" class="headerlink" title="数据库的下载安装、配置与使用"></a>数据库的下载安装、配置与使用</h3><h4 id="MySQL的下载："><a href="#MySQL的下载：" class="headerlink" title="MySQL的下载："></a>MySQL的下载：</h4><p><a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/mysql/5.5.html#downloads">https://dev.mysql.com/downloads/mysql/5.5.html#downloads</a></p>
+<h4 id="MySQL服务的启动和停止："><a href="#MySQL服务的启动和停止：" class="headerlink" title="MySQL服务的启动和停止："></a>MySQL服务的启动和停止：</h4><ol>
+<li><h5 id="右击开始→计算机管理→服务和应用程序→服务"><a href="#右击开始→计算机管理→服务和应用程序→服务" class="headerlink" title="右击开始→计算机管理→服务和应用程序→服务"></a>右击开始→计算机管理→服务和应用程序→服务</h5></li>
+<li><h5 id="以管理员身份运行命令提示符"><a href="#以管理员身份运行命令提示符" class="headerlink" title="以管理员身份运行命令提示符"></a>以管理员身份运行<strong>命令提示符</strong></h5><ul>
 <li>停止：<code>net stop mysql</code></li>
 <li>启动：<code>net start mysql</code></li>
 </ul>
 </li>
 </ol>
-<h6 id="MySQL服务端的登陆和退出："><a href="#MySQL服务端的登陆和退出：" class="headerlink" title="MySQL服务端的登陆和退出："></a>MySQL服务端的登陆和退出：</h6><p><em>登陆之前确保服务是启动的！</em></p>
+<h4 id="MySQL服务端的登陆和退出："><a href="#MySQL服务端的登陆和退出：" class="headerlink" title="MySQL服务端的登陆和退出："></a>MySQL服务端的登陆和退出：</h4><p><em>登陆之前确保服务是启动的！</em></p>
 <ol>
-<li><p>登陆：</p>
-<ul>
+<li><h5 id="登陆："><a href="#登陆：" class="headerlink" title="登陆："></a>登陆：</h5><ul>
 <li><p>命令提示符 -h主机名 -P端口号 -u用户名 -p密码   <strong>(p和密码之间不能有空格)</strong></p>
 <p>​                    <code>mysql -h localhost -P 3306 -u root -p</code></p>
 <p>​                    <code>mysql -hlocalhost -P3306 -uroot -p</code>    </p>
@@ -345,10 +344,9 @@
 </li>
 </ul>
 </li>
-<li><p>退出：exit 或 Ctrl+C</p>
-</li>
+<li><h5 id="退出：exit-或-Ctrl-C"><a href="#退出：exit-或-Ctrl-C" class="headerlink" title="退出：exit 或 Ctrl+C"></a>退出：exit 或 Ctrl+C</h5></li>
 </ol>
-<h4 id="MySQL的常见命令"><a href="#MySQL的常见命令" class="headerlink" title="MySQL的常见命令"></a>MySQL的常见命令</h4><ol>
+<h3 id="MySQL的常见命令"><a href="#MySQL的常见命令" class="headerlink" title="MySQL的常见命令"></a>MySQL的常见命令</h3><ol>
 <li><p>查看当前所有的数据库        <code>show databases;</code></p>
 </li>
 <li><p>打开指定的库                       <code>use 库名；</code></p>
@@ -373,7 +371,7 @@
 <p>​                <code>mysql --version</code>    或者    <code>mysql -V</code></p>
 </li>
 </ol>
-<h5 id="MySQL语法规范"><a href="#MySQL语法规范" class="headerlink" title="MySQL语法规范"></a>MySQL语法规范</h5><ol>
+<h3 id="MySQL语法规范"><a href="#MySQL语法规范" class="headerlink" title="MySQL语法规范"></a>MySQL语法规范</h3><ol>
 <li>不区分大小写，但建议关键字大写，表名、列名小写</li>
 <li>每行命令最好用分号结尾</li>
 <li>每条命令根据需要，可以进行缩进或换行</li>
@@ -383,7 +381,70 @@
 </ol>
 </li>
 </ol>
-
+<h2 id="DQL语言的学习"><a href="#DQL语言的学习" class="headerlink" title="DQL语言的学习"></a>DQL语言的学习</h2><h3 id="基础查询"><a href="#基础查询" class="headerlink" title="基础查询"></a>基础查询</h3><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ol>
+<li>查询列表可以是：表中的字段、常量值、表达式、函数</li>
+<li>查询的结果是一个虚拟的表格</li>
+</ol>
+<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><p>​    select    查询列表    from    表名；</p>
+<p>​    查询前先打开数据库        <code>use myemployees;</code></p>
+<ol>
+<li><p>查询表中的单个字段    <code>select last_name from employees;</code></p>
+</li>
+<li><p>查询表中多个字段        <code>select last_name,salary,email,from employees;</code></p>
+</li>
+<li><p>查询表中的所有字段    <code>select * from employees;</code></p>
+</li>
+<li><p>查询常量值                   <code>select 100;</code>      <code>select &#39;john&#39;;</code></p>
+</li>
+<li><p>查询表达式                   <code>select 100*98;</code>    </p>
+</li>
+<li><p>查询函数                       <code>select verson();</code></p>
+</li>
+<li><p>为字段起别名</p>
+<ul>
+<li>好处：1、便于理解</li>
+</ul>
+<p>​                    2、如果要查询的字段有重名的情况，使用别名可以区分开来</p>
+<ul>
+<li><p>方式一：使用as</p>
+<p><code>select last_name as 姓，first_name as 名 from employees;</code></p>
+</li>
+<li><p>方式二：使用空格</p>
+<p><code>select last_name 姓,first_name 名 from employees;</code></p>
+</li>
+<li><p>案例：查询salary,显示结果为 out put</p>
+<ul>
+<li><p><code>select salary as &#39;out put&#39; from employees; </code></p>
+<p><em>当别名中有空格、#等特殊符号时，用引号括起来</em></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>去重</p>
+<p> 查询员工表中涉及到的所有的部门编号                         </p>
+<p> <code>select distinct department_id from employees;</code></p>
+</li>
+<li><p>+的作用</p>
+<ul>
+<li>mysql中+只有一个功能：运算符</li>
+</ul>
+<ol>
+<li>两个操作数都为数值型，则做加法运算    <code>select 100+90;</code></li>
+<li>其中一方为字符型，试图将字符型数值转换成数值型<ul>
+<li>如果转换成功，则继续做加法运算    <code>select &#39;123&#39;+90;</code></li>
+<li>如果转换失败，则将字符型数值转换成0    <code>select &#39;john&#39;+90;</code></li>
+</ul>
+</li>
+<li>只要其中一方为null,则结果肯定为null</li>
+</ol>
+<ul>
+<li><p>案例：查询员工名和姓连接成一个字段，并显示为 姓名</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">		concat(last_name,first_name) <span class="keyword">as</span> 姓名</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">		employees</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h3><h3 id="排序查询"><a href="#排序查询" class="headerlink" title="排序查询"></a>排序查询</h3><h3 id="常见函数"><a href="#常见函数" class="headerlink" title="常见函数"></a>常见函数</h3><h3 id="分组函数"><a href="#分组函数" class="headerlink" title="分组函数"></a>分组函数</h3><h3 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h3><h3 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h3><h3 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h3><h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><h3 id="union联合查询"><a href="#union联合查询" class="headerlink" title="union联合查询"></a>union联合查询</h3><h2 id="DML语言的学习"><a href="#DML语言的学习" class="headerlink" title="DML语言的学习"></a>DML语言的学习</h2><h3 id="插入语句"><a href="#插入语句" class="headerlink" title="插入语句"></a>插入语句</h3><h3 id="修改语句"><a href="#修改语句" class="headerlink" title="修改语句"></a>修改语句</h3><h3 id="删除语句"><a href="#删除语句" class="headerlink" title="删除语句"></a>删除语句</h3><h2 id="DDL语言的学习"><a href="#DDL语言的学习" class="headerlink" title="DDL语言的学习"></a>DDL语言的学习</h2><h3 id="库和表的管理"><a href="#库和表的管理" class="headerlink" title="库和表的管理"></a>库和表的管理</h3><h3 id="常见数据类型介绍"><a href="#常见数据类型介绍" class="headerlink" title="常见数据类型介绍"></a>常见数据类型介绍</h3><h3 id="常见约束"><a href="#常见约束" class="headerlink" title="常见约束"></a>常见约束</h3><h2 id="TCL语言的学习"><a href="#TCL语言的学习" class="headerlink" title="TCL语言的学习"></a>TCL语言的学习</h2><h3 id="事务和事务处理"><a href="#事务和事务处理" class="headerlink" title="事务和事务处理"></a>事务和事务处理</h3><h2 id="视图的讲解"><a href="#视图的讲解" class="headerlink" title="视图的讲解"></a>视图的讲解</h2><h2 id="存储过程和函数"><a href="#存储过程和函数" class="headerlink" title="存储过程和函数"></a>存储过程和函数</h2><h2 id="流程控制结构"><a href="#流程控制结构" class="headerlink" title="流程控制结构"></a>流程控制结构</h2>
     </div>
 
     
@@ -400,7 +461,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://www.imxtz.top/2022/06/23/14/30/49/" title="MySQL学习笔记">http://www.imxtz.top/2022/06/23/14/30/49/</a>
+      <a href="http://www.imxtz.top/2022/06/24/16/17/01/" title="MySQL学习笔记">http://www.imxtz.top/2022/06/24/16/17/01/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -453,7 +514,7 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">2k</span>
+    <span title="站点总字数">3k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
